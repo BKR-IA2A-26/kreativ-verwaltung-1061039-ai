@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DMST")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d2b91f09fbd202438a58f22cea6c5eca6150d6a7")]
 [assembly: System.Reflection.AssemblyProductAttribute("DMST")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DMST")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

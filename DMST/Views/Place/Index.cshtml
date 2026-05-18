@@ -1,0 +1,24 @@
+﻿@model IEnumerable<DMST.Models.Place>
+<h2>Places</h2>
+<a asp-action="Create">+ New</a>
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Campaign</th>
+        <th></th>
+    </tr>
+    @foreach (var p in Model)
+    {
+        <tr>
+            <td>@p.Name</td>
+            <td>@p.Type</td>
+            <td>@p.Campaign?.Name</td>
+            <td>
+                <a asp-action="Details" asp-route-id="@p.PlaceId">Details</a> |
+                <a asp-action="Edit" asp-route-id="@p.PlaceId">Edit</a> |
+                <a asp-action="Delete" asp-route-id="@p.PlaceId">Delete</a>
+            </td>
+        </tr>
+    }
+</table>

@@ -1,0 +1,17 @@
+﻿@model DMST.Models.Quest
+<h2>Edit Quest</h2>
+<form asp-action="Edit">
+    <input type="hidden" asp-for="QuestId" />
+    Title: <input asp-for="Title" /><br />
+    Reward: <input asp-for="Reward" /><br />
+    Requirement: <textarea asp-for="Requirement"></textarea><br />
+    Campaign:
+    <select asp-for="CampaignId">
+        @foreach (var c in ViewBag.Campaigns)
+        {
+            <option value="@c.CampaignId">@c.Name</option>
+        }
+    </select><br />
+    <button type="submit">Speichern</button>
+    <a asp-action="Index">Zurück</a>
+</form>

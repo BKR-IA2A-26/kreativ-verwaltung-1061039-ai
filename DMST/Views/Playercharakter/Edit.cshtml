@@ -1,0 +1,19 @@
+﻿@model DMST.Models.Playercharakter
+<h2>Edit Character</h2>
+<form asp-action="Edit">
+    <input type="hidden" asp-for="CharId" />
+    Name: <input asp-for="Name" /><br />
+    Race: <input asp-for="Race" /><br />
+    Spells: <textarea asp-for="Spells"></textarea><br />
+    Weapons: <textarea asp-for="Weapons"></textarea><br />
+    Notes: <textarea asp-for="Notes"></textarea><br />
+    Campaign:
+    <select asp-for="CampaignId">
+        @foreach (var c in ViewBag.Campaigns)
+        {
+            <option value="@c.CampaignId">@c.Name</option>
+        }
+    </select><br />
+    <button type="submit">Speichern</button>
+    <a asp-action="Index">Zurück</a>
+</form>

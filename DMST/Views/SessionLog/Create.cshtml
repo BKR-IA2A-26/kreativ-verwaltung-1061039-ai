@@ -1,0 +1,16 @@
+﻿@model DMST.Models.Sessionlog
+<h2>New Session</h2>
+<form asp-action="Create">
+    Date: <input asp-for="Date" type="date" /><br />
+    Notes: <textarea asp-for="Notes"></textarea><br />
+    Summary: <textarea asp-for="Summary"></textarea><br />
+    Campaign:
+    <select asp-for="CampaignId">
+        @foreach (var c in ViewBag.Campaigns)
+        {
+            <option value="@c.CampaignId">@c.Name</option>
+        }
+    </select><br />
+    <button type="submit">Speichern</button>
+    <a asp-action="Index">Zurück</a>
+</form>

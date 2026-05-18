@@ -1,0 +1,26 @@
+﻿@model IEnumerable<DMST.Models.ItemLoot>
+<h2>Items / Loot</h2>
+<a asp-action="Create">+ New</a>
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <th>Rarity</th>
+        <th>Weight</th>
+        <th>Place</th>
+        <th></th>
+    </tr>
+    @foreach (var i in Model)
+    {
+        <tr>
+            <td>@i.Name</td>
+            <td>@i.Rarity</td>
+            <td>@i.Weight</td>
+            <td>@i.Place?.Name</td>
+            <td>
+                <a asp-action="Details" asp-route-id="@i.ItemId">Details</a> |
+                <a asp-action="Edit" asp-route-id="@i.ItemId">Edit</a> |
+                <a asp-action="Delete" asp-route-id="@i.ItemId">Delete</a>
+            </td>
+        </tr>
+    }
+</table>

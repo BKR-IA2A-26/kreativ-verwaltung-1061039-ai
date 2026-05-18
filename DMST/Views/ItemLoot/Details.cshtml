@@ -1,0 +1,8 @@
+﻿@model DMST.Models.ItemLoot
+<h2>@Model.Name</h2>
+<p>Attributes: @Model.Attributes</p>
+<p>Weight: @Model.Weight</p>
+<p>Rarity: @Model.Rarity</p>
+<p>Place: @Model.Place?.Name</p>
+<a asp-action="Edit" asp-route-id="@Model.ItemId">Edit</a> |
+<a asp-action="Index">Zurück</a>

@@ -1,0 +1,9 @@
+﻿@model DMST.Models.Campaign
+<h2>New Campaign</h2>
+<form asp-action="Create">
+    Name: <input asp-for="Name" /><br />
+    Start: <input asp-for="StartDate" type="date" /><br />
+    Setting: <input asp-for="Setting" /><br />
+    <button type="submit">Speichern</button>
+    <a asp-action="Index">Zurück</a>
+</form>

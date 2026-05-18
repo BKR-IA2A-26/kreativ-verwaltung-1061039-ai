@@ -1,0 +1,28 @@
+﻿@model IEnumerable<DMST.Models.Npc>
+<h2>NPCs</h2>
+<a asp-action="Create">+ New</a>
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <th>Race</th>
+        <th>Mindset</th>
+        <th>Campaign</th>
+        <th>Place</th>
+        <th></th>
+    </tr>
+    @foreach (var n in Model)
+    {
+        <tr>
+            <td>@n.Name</td>
+            <td>@n.Race</td>
+            <td>@n.Mindset</td>
+            <td>@n.Campaign?.Name</td>
+            <td>@n.Place?.Name</td>
+            <td>
+                <a asp-action="Details" asp-route-id="@n.NpcId">Details</a> |
+                <a asp-action="Edit" asp-route-id="@n.NpcId">Edit</a> |
+                <a asp-action="Delete" asp-route-id="@n.NpcId">Delete</a>
+            </td>
+        </tr>
+    }
+</table>

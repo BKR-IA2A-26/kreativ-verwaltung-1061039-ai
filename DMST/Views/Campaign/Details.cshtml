@@ -1,0 +1,6 @@
+﻿@model DMST.Models.Campaign
+<h2>@Model.Name</h2>
+<p>Start: @Model.StartDate</p>
+<p>Setting: @Model.Setting</p>
+<a asp-action="Edit" asp-route-id="@Model.CampaignId">Edit</a> |
+<a asp-action="Index">Zurück</a>

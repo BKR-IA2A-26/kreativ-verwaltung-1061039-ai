@@ -1,0 +1,24 @@
+﻿@model DMST.Models.Npc
+<h2>New NPC</h2>
+<form asp-action="Create">
+    Name: <input asp-for="Name" /><br />
+    Race: <input asp-for="Race" /><br />
+    Mindset: <input asp-for="Mindset" /><br />
+    Notes: <textarea asp-for="Notes"></textarea><br />
+    Campaign:
+    <select asp-for="CampaignId">
+        @foreach (var c in ViewBag.Campaigns)
+        {
+            <option value="@c.CampaignId">@c.Name</option>
+        }
+    </select><br />
+    Place:
+    <select asp-for="PlaceId">
+        @foreach (var p in ViewBag.Places)
+        {
+            <option value="@p.PlaceId">@p.Name</option>
+        }
+    </select><br />
+    <button type="submit">Speichern</button>
+    <a asp-action="Index">Zurück</a>
+</form>

@@ -1,0 +1,9 @@
+﻿@model DMST.Models.Playercharakter
+<h2>@Model.Name</h2>
+<p>Race: @Model.Race</p>
+<p>Spells: @Model.Spells</p>
+<p>Weapons: @Model.Weapons</p>
+<p>Notes: @Model.Notes</p>
+<p>Campaign: @Model.Campaign?.Name</p>
+<a asp-action="Edit" asp-route-id="@Model.CharId">Edit</a> |
+<a asp-action="Index">Zurück</a>

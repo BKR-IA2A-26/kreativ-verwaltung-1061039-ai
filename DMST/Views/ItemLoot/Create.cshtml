@@ -1,0 +1,17 @@
+﻿@model DMST.Models.ItemLoot
+<h2>New Item</h2>
+<form asp-action="Create">
+    Name: <input asp-for="Name" /><br />
+    Attributes: <textarea asp-for="Attributes"></textarea><br />
+    Weight: <input asp-for="Weight" /><br />
+    Rarity: <input asp-for="Rarity" /><br />
+    Place:
+    <select asp-for="PlaceId">
+        @foreach (var p in ViewBag.Places)
+        {
+            <option value="@p.PlaceId">@p.Name</option>
+        }
+    </select><br />
+    <button type="submit">Speichern</button>
+    <a asp-action="Index">Zurück</a>
+</form>

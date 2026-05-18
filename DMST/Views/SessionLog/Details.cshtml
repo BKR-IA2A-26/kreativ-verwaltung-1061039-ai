@@ -1,0 +1,7 @@
+﻿@model DMST.Models.Sessionlog
+<h2>Session – @Model.Date</h2>
+<p>Summary: @Model.Summary</p>
+<p>Notes: @Model.Notes</p>
+<p>Campaign: @Model.Campaign?.Name</p>
+<a asp-action="Edit" asp-route-id="@Model.SessionId">Edit</a> |
+<a asp-action="Index">Zurück</a>

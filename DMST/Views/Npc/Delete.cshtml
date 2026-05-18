@@ -1,0 +1,7 @@
+﻿@model DMST.Models.Npc
+<h2>@Model.Name wirklich löschen?</h2>
+<form asp-action="Delete">
+    <input type="hidden" asp-for="NpcId" />
+    <button type="submit">Ja</button>
+    <a asp-action="Index">Nein</a>
+</form>

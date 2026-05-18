@@ -1,0 +1,24 @@
+﻿@model IEnumerable<DMST.Models.Sessionlog>
+<h2>Session Logs</h2>
+<a asp-action="Create">+ New</a>
+<table border="1">
+    <tr>
+        <th>Date</th>
+        <th>Summary</th>
+        <th>Campaign</th>
+        <th></th>
+    </tr>
+    @foreach (var s in Model)
+    {
+        <tr>
+            <td>@s.Date</td>
+            <td>@s.Summary</td>
+            <td>@s.Campaign?.Name</td>
+            <td>
+                <a asp-action="Details" asp-route-id="@s.SessionId">Details</a> |
+                <a asp-action="Edit" asp-route-id="@s.SessionId">Edit</a> |
+                <a asp-action="Delete" asp-route-id="@s.SessionId">Delete</a>
+            </td>
+        </tr>
+    }
+</table>

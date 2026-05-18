@@ -1,0 +1,7 @@
+﻿@model DMST.Models.Sessionlog
+<h2>Session vom @Model.Date wirklich löschen?</h2>
+<form asp-action="Delete">
+    <input type="hidden" asp-for="SessionId" />
+    <button type="submit">Ja</button>
+    <a asp-action="Index">Nein</a>
+</form>

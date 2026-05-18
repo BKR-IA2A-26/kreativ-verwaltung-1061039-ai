@@ -1,0 +1,7 @@
+﻿@model DMST.Models.Quest
+<h2>@Model.Title wirklich löschen?</h2>
+<form asp-action="Delete">
+    <input type="hidden" asp-for="QuestId" />
+    <button type="submit">Ja</button>
+    <a asp-action="Index">Nein</a>
+</form>

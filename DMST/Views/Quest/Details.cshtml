@@ -1,0 +1,7 @@
+﻿@model DMST.Models.Quest
+<h2>@Model.Title</h2>
+<p>Reward: @Model.Reward</p>
+<p>Requirement: @Model.Requirement</p>
+<p>Campaign: @Model.Campaign?.Name</p>
+<a asp-action="Edit" asp-route-id="@Model.QuestId">Edit</a> |
+<a asp-action="Index">Zurück</a>

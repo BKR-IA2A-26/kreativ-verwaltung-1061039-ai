@@ -1,0 +1,9 @@
+﻿@model DMST.Models.Npc
+<h2>@Model.Name</h2>
+<p>Race: @Model.Race</p>
+<p>Mindset: @Model.Mindset</p>
+<p>Notes: @Model.Notes</p>
+<p>Campaign: @Model.Campaign?.Name</p>
+<p>Place: @Model.Place?.Name</p>
+<a asp-action="Edit" asp-route-id="@Model.NpcId">Edit</a> |
+<a asp-action="Index">Zurück</a>

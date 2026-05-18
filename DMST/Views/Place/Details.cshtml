@@ -1,0 +1,7 @@
+﻿@model DMST.Models.Place
+<h2>@Model.Name</h2>
+<p>Type: @Model.Type</p>
+<p>Description: @Model.Description</p>
+<p>Campaign: @Model.Campaign?.Name</p>
+<a asp-action="Edit" asp-route-id="@Model.PlaceId">Edit</a> |
+<a asp-action="Index">Zurück</a>

@@ -1,0 +1,17 @@
+﻿@model DMST.Models.Place
+<h2>Edit Place</h2>
+<form asp-action="Edit">
+    <input type="hidden" asp-for="PlaceId" />
+    Name: <input asp-for="Name" /><br />
+    Type: <input asp-for="Type" /><br />
+    Description: <textarea asp-for="Description"></textarea><br />
+    Campaign:
+    <select asp-for="CampaignId">
+        @foreach (var c in ViewBag.Campaigns)
+        {
+            <option value="@c.CampaignId">@c.Name</option>
+        }
+    </select><br />
+    <button type="submit">Speichern</button>
+    <a asp-action="Index">Zurück</a>
+</form>

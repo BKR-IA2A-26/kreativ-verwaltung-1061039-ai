@@ -1,0 +1,24 @@
+﻿@model IEnumerable<DMST.Models.Quest>
+<h2>Quests</h2>
+<a asp-action="Create">+ New</a>
+<table border="1">
+    <tr>
+        <th>Title</th>
+        <th>Reward</th>
+        <th>Campaign</th>
+        <th></th>
+    </tr>
+    @foreach (var q in Model)
+    {
+        <tr>
+            <td>@q.Title</td>
+            <td>@q.Reward</td>
+            <td>@q.Campaign?.Name</td>
+            <td>
+                <a asp-action="Details" asp-route-id="@q.QuestId">Details</a> |
+                <a asp-action="Edit" asp-route-id="@q.QuestId">Edit</a> |
+                <a asp-action="Delete" asp-route-id="@q.QuestId">Delete</a>
+            </td>
+        </tr>
+    }
+</table>
